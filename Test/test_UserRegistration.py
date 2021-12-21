@@ -38,7 +38,7 @@ class TestUserRegistration(unittest.TestCase):
         try:
             object_user.setter_last_name(expected)
         except UserRegistrationException as exception:
-            self.assertEqual("Invalid last name", exception.__str__())
+            self.assertEqual("Invalid", exception.__str__())
 
     def test_last_name_is_empty(self):
         expected = ''
@@ -60,7 +60,7 @@ class TestUserRegistration(unittest.TestCase):
         try:
             object_user.setter_mobile_no(expected)
         except UserRegistrationException as exception:
-            self.assertEqual("Invalid phone number", exception.__str__())
+            self.assertEqual("Invalid", exception.__str__())
 
     def test_mobile_no_is_empty(self):
         expected = ""
@@ -68,7 +68,7 @@ class TestUserRegistration(unittest.TestCase):
         try:
             object_user.setter_mobile_no(expected)
         except UserRegistrationException as exception:
-            self.assertEqual("Phone no cannot be empty", exception.__str__())
+            self.assertEqual("Invalid", exception.__str__())
 
 
 if __name__ == '__main__':
